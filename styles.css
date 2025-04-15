@@ -1,0 +1,64 @@
+body {
+    background-color: #161616;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    background-blend-mode: overlay;
+    color: #f1f1f1;
+    font-family: 'Winky Rough', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;   
+    padding: 0px 10%;
+}
+
+header {
+    color:#dddddd;
+    display: flex;
+    align-items: center;    
+    background-color: #161616;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: space-between;
+}
+
+header h1{
+    transition: color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #dddddd;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgb(255, 70, 162);
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+    transform-origin: right;
+    bottom: 4px;
+    left: 0;
+}
+
+nav ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+nav a:hover, header h1:hover {
+    color: hotpink;
+}
